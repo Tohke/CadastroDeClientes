@@ -3,23 +3,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cadastro.cadastrodeclientes.HelloController">
    <children>
-      <TextField layoutX="59.0" layoutY="93.0" prefHeight="25.0" prefWidth="335.0" />
-      <TextField layoutX="59.0" layoutY="143.0" />
-      <TextField layoutX="59.0" layoutY="206.0" prefHeight="25.0" prefWidth="335.0" />
+      <TextField fx:id="name" layoutX="59.0" layoutY="93.0" prefHeight="25.0" prefWidth="335.0" />
+      <TextField fx:id="cep" layoutX="59.0" layoutY="143.0" />
+      <TextField fx:id="street" layoutX="59.0" layoutY="206.0" prefHeight="25.0" prefWidth="335.0" />
       <Label layoutX="19.0" layoutY="97.0" text="Nome:" />
       <Label layoutX="23.0" layoutY="147.0" text="CEP:" />
       <Label layoutX="23.0" layoutY="210.0" text="Rua:" />
-      <TextField layoutX="500.0" layoutY="206.0" prefHeight="25.0" prefWidth="74.0" />
-      <TextField layoutX="59.0" layoutY="271.0" prefHeight="25.0" prefWidth="335.0" />
-      <TextField layoutX="59.0" layoutY="333.0" prefHeight="25.0" prefWidth="335.0" />
-      <TextField layoutX="477.0" layoutY="272.0" prefHeight="25.0" prefWidth="114.0" />
+      <TextField fx:id="number" layoutX="500.0" layoutY="206.0" prefHeight="25.0" prefWidth="74.0" />
+      <TextField fx:id="city" layoutX="59.0" layoutY="271.0" prefHeight="25.0" prefWidth="335.0" />
+      <TextField fx:id="phone_number" layoutX="59.0" layoutY="333.0" prefHeight="25.0" prefWidth="335.0" />
+      <TextField fx:id="state" layoutX="477.0" layoutY="272.0" prefHeight="25.0" prefWidth="114.0" />
       <Label layoutX="437.0" layoutY="210.0" text="Número:" />
       <Label layoutX="15.0" layoutY="276.0" text="Cidade:" />
       <Label layoutX="10.0" layoutY="337.0" text="Telefone:" />
       <Label layoutX="423.0" layoutY="276.0" text="Estado:" />
-      <Button layoutX="274.0" layoutY="143.0" mnemonicParsing="false" text="Buscar" />
+      <Button layoutX="274.0" layoutY="143.0" mnemonicParsing="false" onAction="#checkCep" text="Buscar" />
       <Button layoutX="182.0" layoutY="398.0" mnemonicParsing="false" text="Limpar" />
       <Button layoutX="299.0" layoutY="398.0" mnemonicParsing="false" text="Gravar" />
    </children>
