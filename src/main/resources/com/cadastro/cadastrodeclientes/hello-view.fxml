@@ -20,9 +20,9 @@
       <Label layoutX="41.0" layoutY="66.0" text="Telefone:" />
       <Label layoutX="437.0" layoutY="219.0" text="Estado:" />
       <Button layoutX="317.0" layoutY="98.0" mnemonicParsing="false" onAction="#checkCep" text="Buscar" />
-      <Button layoutX="150.0" layoutY="259.0" mnemonicParsing="false" text="Limpar" />
+      <Button layoutX="150.0" layoutY="259.0" mnemonicParsing="false" onAction="#clearFields" text="Limpar" />
       <Button layoutX="241.0" layoutY="259.0" mnemonicParsing="false" onAction="#registerClient" text="Gravar" />
-      <TableView layoutX="67.0" layoutY="335.0" prefHeight="200.0" prefWidth="712.0">
+      <TableView fx:id="clientsTableView" layoutX="67.0" layoutY="335.0" prefHeight="200.0" prefWidth="712.0">
         <columns>
           <TableColumn fx:id="codeColumn" prefWidth="75.0" text="Código" />
           <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Nome" />

@@ -46,6 +46,9 @@ private void initialize(){
         cityColumn.setCellValueFactory(cid -> {
             return new SimpleStringProperty(cid.getValue().getEndereco().getCity());
         });
+        stateColumn.setCellValueFactory(cellData -> {
+            return new SimpleStringProperty(cellData.getValue().getEndereco().getState());
+        });
 
 
 
@@ -88,7 +91,19 @@ private void checkCep(){
                 phone_number.getText()
         );
         clientsList.add(newClient);
+
         clientsTableView.setItems(FXCollections.observableArrayList(clientsList));
+    }
+    // ====================CleanFunction=======================
+    @FXML
+    private void clearFields() {
+        name.clear();
+        phone_number.clear();
+        cep.clear();
+        street.clear();
+        number.clear();
+        city.clear();
+        state.clear();
     }
 
     }

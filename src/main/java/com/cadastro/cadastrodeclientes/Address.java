@@ -30,7 +30,7 @@ public class Address {
         this.cep = cep;
     }
 
-    // ====================RUA=======================
+    // ====================STREET=======================
     public String getStreet() {
         return street;
     }
@@ -38,7 +38,7 @@ public class Address {
         this.street = street;
     }
 
-    // ====================NUMERO=======================
+    // ====================NUMBER=======================
     public String getNumber() {
         return number;
     }
@@ -46,7 +46,7 @@ public class Address {
         this.number = number;
     }
 
-    // ====================CIDADE=======================
+    // ====================CITY=======================
     public String getCity() {
         return city;
     }
@@ -54,7 +54,7 @@ public class Address {
         this.city = city;
     }
 
-    // ====================ESTADO=======================
+    // ====================STATE=======================
     public String getState() {
         return state;
     }

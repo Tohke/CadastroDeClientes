@@ -12,7 +12,7 @@ public class Clients {
         this.id = counter++;
     }
 
-    // Construtor Cheio (Opcional, mas útil)
+    // Construtor Cheio
     public Clients(String name, Address address, String phone_number) {
         this.id = counter++;
         this.name = name;
