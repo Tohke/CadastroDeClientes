@@ -3,24 +3,33 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cadastro.cadastrodeclientes.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cadastro.cadastrodeclientes.HelloController">
    <children>
-      <TextField fx:id="name" layoutX="59.0" layoutY="93.0" prefHeight="25.0" prefWidth="335.0" />
-      <TextField fx:id="cep" layoutX="59.0" layoutY="143.0" />
-      <TextField fx:id="street" layoutX="59.0" layoutY="206.0" prefHeight="25.0" prefWidth="335.0" />
-      <Label layoutX="19.0" layoutY="97.0" text="Nome:" />
-      <Label layoutX="23.0" layoutY="147.0" text="CEP:" />
-      <Label layoutX="23.0" layoutY="210.0" text="Rua:" />
-      <TextField fx:id="number" layoutX="500.0" layoutY="206.0" prefHeight="25.0" prefWidth="74.0" />
-      <TextField fx:id="city" layoutX="59.0" layoutY="271.0" prefHeight="25.0" prefWidth="335.0" />
-      <TextField fx:id="phone_number" layoutX="59.0" layoutY="333.0" prefHeight="25.0" prefWidth="335.0" />
-      <TextField fx:id="state" layoutX="477.0" layoutY="272.0" prefHeight="25.0" prefWidth="114.0" />
-      <Label layoutX="437.0" layoutY="210.0" text="Número:" />
-      <Label layoutX="15.0" layoutY="276.0" text="Cidade:" />
-      <Label layoutX="10.0" layoutY="337.0" text="Telefone:" />
-      <Label layoutX="423.0" layoutY="276.0" text="Estado:" />
-      <Button layoutX="274.0" layoutY="143.0" mnemonicParsing="false" onAction="#checkCep" text="Buscar" />
-      <Button layoutX="182.0" layoutY="398.0" mnemonicParsing="false" text="Limpar" />
-      <Button layoutX="299.0" layoutY="398.0" mnemonicParsing="false" text="Gravar" />
+      <TextField fx:id="name" layoutX="88.0" layoutY="31.0" prefHeight="25.0" prefWidth="335.0" />
+      <TextField fx:id="cep" layoutX="102.0" layoutY="98.0" />
+      <TextField fx:id="street" layoutX="73.0" layoutY="149.0" prefHeight="25.0" prefWidth="335.0" />
+      <Label layoutX="48.0" layoutY="35.0" text="Nome:" />
+      <Label layoutX="66.0" layoutY="102.0" text="CEP:" />
+      <Label layoutX="37.0" layoutY="153.0" text="Rua:" />
+      <TextField fx:id="number" layoutX="514.0" layoutY="149.0" prefHeight="25.0" prefWidth="74.0" />
+      <TextField fx:id="city" layoutX="73.0" layoutY="214.0" prefHeight="25.0" prefWidth="335.0" />
+      <TextField fx:id="phone_number" layoutX="90.0" layoutY="62.0" prefHeight="25.0" prefWidth="335.0" />
+      <TextField fx:id="state" layoutX="491.0" layoutY="215.0" prefHeight="25.0" prefWidth="114.0" />
+      <Label layoutX="451.0" layoutY="153.0" text="Número:" />
+      <Label layoutX="29.0" layoutY="219.0" text="Cidade:" />
+      <Label layoutX="41.0" layoutY="66.0" text="Telefone:" />
+      <Label layoutX="437.0" layoutY="219.0" text="Estado:" />
+      <Button layoutX="317.0" layoutY="98.0" mnemonicParsing="false" onAction="#checkCep" text="Buscar" />
+      <Button layoutX="150.0" layoutY="259.0" mnemonicParsing="false" text="Limpar" />
+      <Button layoutX="241.0" layoutY="259.0" mnemonicParsing="false" onAction="#registerClient" text="Gravar" />
+      <TableView layoutX="67.0" layoutY="335.0" prefHeight="200.0" prefWidth="712.0">
+        <columns>
+          <TableColumn fx:id="codeColumn" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Nome" />
+            <TableColumn fx:id="cityColumn" prefWidth="75.0" text="Cidade" />
+            <TableColumn fx:id="stateColumn" prefWidth="75.0" text="Estado" />
+            <TableColumn fx:id="phone_NumberColumn" prefWidth="75.0" text="Telefone" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

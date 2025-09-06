@@ -1,17 +1,20 @@
 package com.cadastro.cadastrodeclientes;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
+
 import java.io.IOException;
+
+import javafx.scene.control.cell.PropertyValueFactory;
 import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class HelloController {
-    @FXML private Label welcomeText;
+    //@FXML private Label welcomeText;
     @FXML private TextField name;
     @FXML private TextField street;
     @FXML private TextField cep;
@@ -19,6 +22,13 @@ public class HelloController {
     @FXML private TextField number;
     @FXML private TextField phone_number;
     @FXML private TextField city;
+    // ====================Table=======================
+    @FXML private TableView<Clients> clientsTableView;
+    @FXML private TableColumn<Clients, Integer> codeColumn;
+    @FXML private TableColumn<Clients, String> nameColumn;
+    @FXML private TableColumn<Clients, String> cityColumn;
+    @FXML private TableColumn<Clients, String> stateColumn;
+    @FXML private TableColumn<Clients, String> phone_NumberColumn;
 
     private Buscador buscador;
     private ArrayList<Clients> clientsList;
@@ -28,6 +38,17 @@ public class HelloController {
 private void initialize(){
         this.buscador = new Buscador();
         this.clientsList = new ArrayList<>();
+        clientsList = new ArrayList<>();// Sem o <> ?
+        codeColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        phone_NumberColumn.setCellValueFactory(new PropertyValueFactory<>("phone_number"));
+
+        cityColumn.setCellValueFactory(cid -> {
+            return new SimpleStringProperty(cid.getValue().getEndereco().getCity());
+        });
+
+
+
 }
 // ====================CheckCep=======================
     @FXML
@@ -67,6 +88,7 @@ private void checkCep(){
                 phone_number.getText()
         );
         clientsList.add(newClient);
+        clientsTableView.setItems(FXCollections.observableArrayList(clientsList));
     }
 
     }

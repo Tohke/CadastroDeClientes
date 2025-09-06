@@ -23,5 +23,4 @@ public class HelloApplication extends Application {
         launch();
     }
 
-    private ArrayList<Clients> clients = new ArrayList<>();
 }

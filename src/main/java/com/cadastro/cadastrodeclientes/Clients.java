@@ -1,8 +1,8 @@
 package com.cadastro.cadastrodeclientes;
 
 public class Clients {
-    private static int counter = 1; // Campo estático para controlar a numeração [cite: 29]
-    private Integer id;
+    private static int counter = 1;
+    private final Integer id;
     private String name;
     private Address address;
     private String phone_number;
@@ -14,7 +14,7 @@ public class Clients {
 
     // Construtor Cheio (Opcional, mas útil)
     public Clients(String name, Address address, String phone_number) {
-        this.id = counter++; // A cada cliente criado, o contador incrementa [cite: 28]
+        this.id = counter++;
         this.name = name;
         this.address = address;
         this.phone_number = phone_number;
